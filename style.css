@@ -1,0 +1,13 @@
+.formula-group {
+    background-color: #f8f9fa;
+}
+
+.result-box {
+    background-color: #e9ecef;
+    cursor: not-allowed;
+    margin-top: 10px;
+}
+
+body {
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+}

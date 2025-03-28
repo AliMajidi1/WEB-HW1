@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="fa" dir="rtl">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>ماشین حساب فرمول‌ها</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body class="p-4">
+    <div class="formula-group mb-4 p-3 border rounded">
+        <input type="text" id="price" class="form-control mb-2" placeholder="قیمت واحد (تومان)">
+        <input type="text" id="quantity" class="form-control mb-2" placeholder="تعداد">
+        <input type="text" id="discount" class="form-control mb-2" placeholder="تخفیف (تومان)">
+        <input type="text" id="tax" class="form-control mb-2" placeholder="مالیات (مثلا 10 برای 10%)">
+        
+        <div class="mt-3">
+            <small class="text-muted">قیمت کل بدون تخفیف:</small>
+            <formula evaluator="price * quantity" class="form-control result-box"></formula>
+        </div>
+        
+        <div class="mt-3">
+            <small class="text-muted">قیمت پس از تخفیف:</small>
+            <formula evaluator="(price * quantity) - discount" class="form-control result-box"></formula>
+        </div>
+        
+        <div class="mt-3">
+            <small class="text-muted">قیمت نهایی با مالیات:</small>
+            <formula evaluator="((price * quantity) - discount) * (1 + (tax / 100))" class="form-control result-box"></formula>
+        </div>
+    </div>
+
+    <script src="script.js"></script>
+</body>
+</html>
